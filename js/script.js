@@ -5,19 +5,31 @@ function generateFiveNumbers(num) {
 
 //funzione per generare array dei numeri
 function createArray() {
-    let array = [];
+    let numbers = [];
     //verifico la lunghezza array e se minore di 5 pusho il numero nell'array
-    while (numbers < 5) {
+    while (numbers.length < 5) {
         //genero il numero con la funzione di sopra 
         let num = generateFiveNumbers();
         //verifico se il numero è incluso nell'array
-        if (!numbers.includes(numbers)); {
+        if (!numbers.includes(num)); {
             //pusho il numero nell array
-            array.push(num);
+            numbers.push(num);
         }
     }
     return numbers;
 }
 
 //assegno a una variabile la function per l'array
-let numbers = createArray();
+let random_numbers = createArray();
+
+document.getElementById('random_numbers').innerHTML = random_numbers;
+
+//setto l'intervallo
+setTimeout(function () {
+    document.getElementById('random_numbers').style.display = 'none';
+
+    //creo array vuoto per l'utente
+    let user_numbers = [];
+
+    //creo un ciclo for di 5 interazioni per fare 5 volte il prompt
+})
