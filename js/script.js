@@ -18,3 +18,6 @@ function createArray() {
     }
     return numbers;
 }
+
+//assegno a una variabile la function per l'array
+let numbers = createArray();
