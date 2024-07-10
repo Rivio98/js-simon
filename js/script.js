@@ -26,10 +26,24 @@ document.getElementById('random_numbers').innerHTML = random_numbers;
 
 //setto l'intervallo
 setTimeout(function () {
-    document.getElementById('random_numbers').style.display = 'none';
+    document.getElementById('random_numbers').innerHTML = '';
 
     //creo array vuoto per l'utente
     let user_numbers = [];
 
     //creo un ciclo for di 5 interazioni per fare 5 volte il prompt
-})
+    for (let i = 0; i < 5; i++) {
+        //chiedo all'utente di inserire un numero per 5 volte
+
+        user_numbers.push(prompt('inserisci i tuoi numeri'));
+    }
+    let guessed = [];
+    //controllo che i numeri inseriti dall'utente siano presenti in quelli random
+    for (let i = 0; i < 5; i++) {
+        if (random_numbers.includes(user_numbers[i])) {
+            guessed.push(user_numbers[i]);
+        }
+    }
+
+
+}, 5000);
